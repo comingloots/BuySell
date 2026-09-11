@@ -1,0 +1,15 @@
+[Unit]
+Description=Telegram Join Request Verifier
+After=network.target
+
+[Service]
+Type=simple
+User=YOUR_LINUX_USER
+WorkingDirectory=/opt/telegram_join_verifier
+ExecStart=/opt/telegram_join_verifier/.venv/bin/python /opt/telegram_join_verifier/bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+
